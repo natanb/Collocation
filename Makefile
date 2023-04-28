@@ -1,10 +1,10 @@
 sHELL	      = /bin/tcsh
 
-FC	      = gfortran
-CFLAGS	      = -O2 
+FC	      = gfortran #-O3 -std=legacy
+CFLAGS	      = -O3 -std=legacy
 LD	      = $(FC)
 
-LDFLAGS	      = 
+LDFLAGS	      = -O3
 
 SRCS	      = Main.c \
 
@@ -54,6 +54,8 @@ EXECS	      =	corona \
 		preditt \
 		predits 
 
+%.o:	%.f
+	$(FC) -c $(CFLAGS) $< -o $@
 
 LIBS	  = model.o algemod.o ordimod.o utilmod.o
 

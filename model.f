@@ -8376,8 +8376,8 @@ C*****************************     TRIMS
      .    SNOISE,OLATO,IND,N,NN,NM,NWDMAX,NMAX,IAST,IU1,IU2,TOLL,ILI)
           IMPLICIT DOUBLE PRECISION(A-H,O-Z)
           CHARACTER*1 DATO 
-          DIMENSION X(1),Y(1),Z(1),U(1),IPX(1),IPY(1),IPZ(1),
-     .    LPX(1),LPY(1),LPZ(1),IWD(1),IAST(1),DATO(120) 
+          DIMENSION X(*),Y(*),Z(*),U(*),IPX(*),IPY(*),IPZ(*),
+     .    LPX(*),LPY(*),LPZ(*),IWD(*),IAST(*),DATO(120) 
           REWIND IU1
           REWIND IU2
           NM=0 
